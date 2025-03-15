@@ -23,8 +23,11 @@ public class LivroService {
         return livroRepository.findById(id);
     }
 
-    public Livro salvarLivro(Livro livro) {
-        return livroRepository.save(livro);
+    public Livro salvarLivro(Livro titulo) {
+        if (titulo.getId() != null && livroRepository.existsById(titulo.getId())) {
+            throw new IllegalArgumentException("esse livro já existe");
+        }
+        return livroRepository.save(titulo);
     }
 
     public void deletarLivro(Long id) {

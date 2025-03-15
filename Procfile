@@ -1,0 +1,1 @@
+web: java -jar build\libs\API-Rest-Spring-Boot-0.0.1-SNAPSHOT.jar
