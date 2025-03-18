@@ -30,7 +30,7 @@ dependencies {
 
 tasks.jar {
 	manifest {
-		attributes['Main-Class'] = "package com.example.demo"
+		attributes['Main-Class'] = "package com.example.demo.Application"
 	}
 }
 
